@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ML Project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h2 align="center"> Crime Prediction</h2>
+		<br>
+		<form class="form-horizontal"  action="{{url_for('home')}}" method="post">
+			<div class="form-group">
+				<label class="control-label col-sm-4">Latitude:</label>
+				<div class="col-sm-5 ">
+					<input type="text" class="form-control" id="lat" placeholder="Enter Latitude Location" name="lat">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4">Longitude:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="lon" placeholder="Enter Longitude Location" name="lon">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4">Year:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="year" placeholder="Enter Year" name="year">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4">Month:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="month" placeholder="Enter Month" name="month">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4">Date:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="date" placeholder="Enter Date" name="date">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4">Hours:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="hour" placeholder="Enter Hours" name="hour">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4">Minutes:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="min" placeholder="Enter Minutes" name="min">
+				</div>
+			</div>
+
+			<button type="submit" class=" col-sm-3 col-sm-offset-5 btn btn-success">Submit</button>
+		</form>
+	</div>
+	<diV class="container">
+	<h2 align="center">It may be <strong style="color: green"> {{ output }} </strong> with accuracy of <strong style="color: green">{{ acc }}% </strong> </h2>
+</diV>
+
+</body>
+</html>
